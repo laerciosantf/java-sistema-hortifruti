@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Administrador</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
+    <!-- Fonts Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body class="bg-warning ">
+    <nav class="navbar navbar-toggleable-sm navbar-inverse fixed-top bg-inverse container-fluid">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <h1 class="navbar-brand mb-0">Hortifruti LS</h1>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-warning">Cadastrar</button>
+                        <button type="button" class="btn btn-warning dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="sr-only">Toggle Dropdown</span>
+                        </button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#cadastroUsuarioModal">Cadastrar usuário</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <ul class="navbar-nav w-100 justify-content-end">
+                <li class="nav-item">
+                    <div class="btn-group">
+                        <button class="btn btn-outline-warning mr-2" href="#">
+                            <i class="fa fa-user-o"></i> Administrador
+                        </button>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <div class="btn-group">
+                        <button class="btn btn-outline-warning" data-toggle="modal" data-target="#logOutSystem">
+                            <i class="fa fa-sign-out"></i> Sair
+                        </button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- modal confirmação sign out -->
+    <div class="modal fade" id="logOutSystem" tabindex="-1" role="dialog" aria-labelledby="confirmacaoSignOut">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                <!-- header modal confirmação sign out-->
+                <div class="modal-header bg-warning">
+                    <!-- título modal confirmação sign out -->
+                    <h4 class="modal-title display-5 font-weight-bold text-center" id="tituloConfirmSignOut">Confirmação!</h4>
+                    <!-- /título modal confirmação sign out -->
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span>&times;</span>
+                    </button>
+                </div>
+                <!-- /header modal confirmação sign out -->
+                <div class="modal-body">
+                    <div class="container text-center">
+                        <form>
+                            <h5 class="display-5 font-weight-bold mt-2">Você realmente deseja sair?</h5>
+                            <div class="btn-group mt-3" role="group" aria-label="Grupo confirmação log out">
+                                <!-- alternativas -->
+                                <a class="btn btn-success btn-lg mr-2" role="button" href="../index.html">Sim</a>
+                                <button class="btn btn-danger btn-lg">Não</button>
+                                <!-- /alternativas -->
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /modal confirmação sair -->
+
+    <!-- modal cadastro usuário -->
+    <div class="modal fade" id="cadastroUsuarioModal" tabindex="-1" role="dialog" aria-labelledby="tituloCadastroUsuarioModal">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <!-- header modal cadastro funcionário -->
+                <div class="modal-header bg-warning">
+                    <!-- título modal cadastro funcionário -->
+                    <h4 class="modal-title display-5 font-weight-bold" id="tituloLoginModal">Cadastro de Funcionário</h4>
+                    <!-- /título modal cadastro funcionário -->
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span>&times;</span>
+                    </button>
+                </div>
+                <!-- /header modal cadastro funcionário -->
+                <div class="modal-body">
+                    <div class="container">
+                        <form>
+                            <!-- dados pessoais funcionário -->
+                            <h5 class="mb-4"><strong>Dados Pessoais</strong></h5>
+                            <div class="form-group row">
+                                <label for="cpfFuncionario" class="col-3 col-form-label">CPF:</label>
+                                <div class="col-9">
+                                    <input type="text" class="form-control" id="cpfFuncionario">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="nomeFuncionario" class="col-3 col-form-label">Nome:</label>
+                                <div class="col-9">
+                                    <input type="text" class="form-control" id="nomeFuncionario">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="nomeUsuarioFuncionario" class="col-3 col-form-label">Usuário:</label>
+                                <div class="col-9">
+                                    <input type="text" class="form-control" id="nomeUsuarioFuncionario">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="senhaFuncionario" class="col-3 col-form-label">Senha:</label>
+                                <div class="col-3">
+                                    <input type="password" class="form-control" id="senhaFuncionario">
+                                </div>
+                                <label for="confSenhaFuncionario" class="col-3 col-form-label">Confirmar senha:</label>
+                                <div class="col-3">
+                                    <input type="password" class="form-control" id="confSenhaFuncionario">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="emailFuncionario" class="col-3 col-form-label">E-mail:</label>
+                                <div class="col-9">
+                                    <input type="email" class="form-control" id="emailFuncionario">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="dtNascimentoFuncionario" class="col-3 col-form-label">Data de Nascimento:</label>
+                                <div class="col-3">
+                                    <input type="date" class="form-control" id="dtNascimentoFuncionario">
+                                </div>
+                                <label for="dtCadastroFuncionario" class="col-3 col-form-label">Data de Cadastro:</label>
+                                <div class="col-3">
+                                    <input type="date" class="form-control" id="dtCadastroFuncionario">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="sexoFuncionario" class="col-3 col-form-label">Sexo:</label>
+                                <div class="col-3">
+                                    <select id="sexoFuncionario" class="form-control">
+                                        <option value="">Selecione</option>
+                                        <option value="masculino">Masculino</option>
+                                        <option value="feminino">Feminino</option>
+                                    </select>
+                                </div>
+                                <label for="cargoFuncionario" class="col-3 col-form-label">Cargo:</label>
+                                <div class="col-3">
+                                    <select id="cargoFuncionario" class="form-control">
+                                        <option value="">Selecione</option>
+                                        <option value="gerente">Gerente</option>
+                                        <option value="caixa">Caixa</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="celularFuncionario" class="col-3 col-form-label">Celular:</label>
+                                <div class="col-3">
+                                    <input type="text" class="form-control" id="celularFuncionario">
+                                </div>
+                                <label for="residencialFuncionario" class="col-3 col-form-label">Residencial:</label>
+                                <div class="col-3">
+                                    <input type="text" class="form-control" id="residencialFuncionario">
+                                </div>
+                            </div>
+                            <!-- /dados pessoais funcionário -->
+                            <hr>
+                            <!-- endereço funcionário -->
+                            <h5 class="my-4"><strong>Endereço</strong></h5>
+                            <div class="form-group row">
+                                <label for="ruaEndFuncionario" class="col-3 col-form-label">Rua:</label>
+                                <div class="col-9">
+                                    <input type="password" class="form-control" id="ruaEndFuncionario">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="municipioEndFuncionario" class="col-3 col-form-label">Município:</label>
+                                <div class="col-3">
+                                    <input type="text" class="form-control" id="municipioEndFuncionario">
+                                </div>
+                                <label for="complEndFuncionario" class="col-3 col-form-label">Complemento:</label>
+                                <div class="col-3">
+                                    <input type="text" class="form-control" id="complEndFuncionario">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="bairroEndFuncionario" class="col-3 col-form-label">Bairro:</label>
+                                <div class="col-3">
+                                    <input type="text" class="form-control" id="bairroEndFuncionario">
+                                </div>
+                                <label for="estadoEndFuncionario" class="col-3 col-form-label">Estado:</label>
+                                <div class="col-3">
+                                    <input type="text" class="form-control" id="estadoEndFuncionario">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="cepEndFuncionario" class="col-3 col-form-label">CEP:</label>
+                                <div class="col-3">
+                                    <input type="text" class="form-control" id="cepEndFuncionario">
+                                </div>
+                                <label for="paisEndFuncionario" class="col-3 col-form-label">País:</label>
+                                <div class="col-3">
+                                    <input type="text" class="form-control" id="paisEndFuncionario">
+                                </div>
+                            </div>
+                            <!-- /endereço funcionário -->
+                        </form>
+                    </div>
+                    <!-- footer modal cadastro funcionário -->
+                    <div class="modal-footer">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-danger btn-lg mr-2">Cadastrar</button>
+                            <button type="button" class="btn btn-secundary btn-lg">Cancelar</button>
+                        </div>
+                    </div>
+                    <!-- /footer modal cadastro funcionário -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /modal cadastro usuário -->
+
+
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+</body>
+</html>

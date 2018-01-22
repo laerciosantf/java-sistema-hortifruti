@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Hortifruti LS</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
+    <!-- Fonts Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body id="home" data-spy="scroll" data-target=".navbar" data-offset="100">
+    <nav class="navbar navbar-toggleable-sm navbar-inverse fixed-top bg-inverse">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <h1 class="navbar-brand mb-0">Hortifruti LS</h1>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#home">Home<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#sobre">Sobre</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#programador">Programador</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- modal login -->
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="tituloLoginModal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-warning">
+                    <h5 class="modal-title display-5 font-weight-bold" id="tituloLoginModal">Faça seu login!</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="user">Usuário</label>
+                            <input class="form-control" id="user">
+                        </div>
+                        <div class="form-group">
+                            <label for="pass">Senha</label>
+                            <input class="form-control" id="pass">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger btn-lg">Entrar!</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /modal login -->
+
+    <!-- jumbotron -->
+    <div class="jumbotron jumbotron-fluid bg-warning text-center">
+        <h1 class="display-1 font-weight-bold pt-5">HORTIFRUTI LS</h1>
+        <p class="lead text-danger font-weight-bold">Um novo site, uma nova vida! ;)</p>
+        <div class="btn-group mt-2" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#loginModal">Para Colabs</button>
+            <button type="button" class="btn btn-secondary btn-lg">Para Clientes</button>
+        </div>
+    </div><!-- /jumbotron -->
+
+    <!-- infos -->
+    <div id="sobre" class="container pt-2">
+        <div class="row">
+            <div class="col-md-4">
+                <h3 class="mb-4">Local de nascimento do site...</h3>
+                <img src="../img/florianopolis.jpg" alt="Floripa" class="img-fluid rounded mb-4">
+                <p>O Hortifruti LS nasceu em Florianópolis, mais conhecida como a Ilha da Magia. A imensa energia criativa da Ilha da Magia fez com que esse site fantástico nascesse.</p>
+            </div>
+            <div class="col-md-4">
+                <h3 class="mb-4">Por que hortifruti?</h3>
+                <p>Originalmente hortifruti foi uma sugestão de tema dado pelo professor Edson Lessa, ministrante da disciplina Programação para Web e, hoje, se tornou um projeto de desenvolvimento solo. Quero aproveitar meu período na universidade para praticar
+                massivamente as principais linguagens de programação do mercado brasileiro e estrangeiro. Através desse conhecimento, eu espero estar mais preparado para encarar o mercado de trabalho, que encontra-se muito concorrido.</p>
+                <p>Laércio Filho - 26/08/2017</p>
+            </div>
+            <div class="col-md-4">
+                <h3 class="mb-4">Horários de funcionamento:</h3>
+                <ul class="list-group">
+                    <li class="list-group-item justify-content-between">
+                        <strong>Segunda-feira:</strong><span class="badge badge-danger badge-pill">08:00 às 18:00</span>
+                    </li>
+                    <li class="list-group-item justify-content-between">
+                        <strong>Terça-feira:</strong><span class="badge badge-danger badge-pill">08:00 às 18:00</span>
+                    </li>
+                    <li class="list-group-item justify-content-between">
+                        <strong>Quarta-feira:</strong><span class="badge badge-danger badge-pill">08:00 às 18:00</span>
+                    </li>
+                    <li class="list-group-item justify-content-between">
+                        <strong>Quinta-feira:</strong><span class="badge badge-danger badge-pill">08:00 às 18:00</span>
+                    </li>
+                    <li class="list-group-item justify-content-between">
+                        <strong>Sexta-feira:</strong><span class="badge badge-danger badge-pill">08:00 às 18:00</span>
+                    </li>
+                    <li class="list-group-item justify-content-between">
+                        <strong>Sábado:</strong><span class="badge badge-danger badge-pill">08:00 às 12:00</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /infos -->
+
+    <div class="container text-center">
+        <h3 id="programador" class="display-4 text-center my-3 text-muted"><strong>Programador</strong></h3>
+        <div class="card mx-auto" style="width: 20rem;">
+            <img class="card-img-top img-fluid" src="../img/programador.jpg" alt="Programador">
+            <div class="card-block">
+                <h4 class="card-title">Laércio de Sant' Anna Filho</h4>
+                <p class="card-text">Estudante do curso de Sistemas de Informação da Universidade do Sul de Santa Catarina - UNISUL.</p>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+    <!-- signup form -->
+    <div class="container">
+        <div class="row py-2 text-muted">
+            <div class="col-md-6 col-xl-5">
+                <p><strong>Sobre o Hortifruti LS</strong></p>
+                <p>O Hortifruti LS nasceu através de um trabalho acadêmico da disciplina Programação para Web, ministrada pelo professor Edson Lessa.</p>
+            </div>
+            <div class="col-md-6 col-xl-5 offset-xl-2">
+                <p><strong>Se mantenha por dentro das novidades da Hortifruti LS!</strong></p>
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Informe seu e-mail...">
+                    <span class="input-group-btn">
+			        <button class="btn btn-danger" type="button">Pronto!</button>
+			      </span>
+                </div>
+            </div>
+        </div>
+    </div> <!-- /signup form -->
+    <hr>
+
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  </body>
+</html>

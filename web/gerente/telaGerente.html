@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gerente</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
+    <!-- Fonts Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body class="bg-warning ">
+    <nav class="navbar navbar-toggleable-sm navbar-inverse fixed-top bg-inverse container-fluid">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <h1 class="navbar-brand mb-0">Hortifruti LS</h1>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown mr-2">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-warning">Cadastrar</button>
+                        <button type="button" class="btn btn-warning dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="sr-only">Toggle Dropdown</span>
+                        </button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#cadastroProdutoModal">Cadastro de produto</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item dropdown mr-2">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-warning">Vendas</button>
+                        <button type="button" class="btn btn-warning dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="sr-only">Toggle Dropdown</span>
+                        </button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#">Relatório de vendas</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item dropdown mr-2">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-warning">Produtos</button>
+                        <button type="button" class="btn btn-warning dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="sr-only">Toggle Dropdown</span>
+                        </button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#">Relatório de estoque geral</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-warning">Promoção</button>
+                        <button type="button" class="btn btn-warning dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="sr-only">Toggle Dropdown</span>
+                        </button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#">Desconto de produto</a>
+                            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#">Períodos relâmpagos</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <ul class="navbar-nav w-100 justify-content-end">
+                <li class="nav-item">
+                    <div class="btn-group">
+                        <button class="btn btn-outline-warning mr-2" href="#">
+                            <i class="fa fa-user-o"></i> Gerente
+                        </button>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <div class="btn-group">
+                        <button class="btn btn-outline-warning" data-toggle="modal" data-target="#logOutSystem">
+                            <i class="fa fa-sign-out"></i> Sair
+                        </button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- modal confirmação sign out -->
+    <div class="modal fade" id="logOutSystem" tabindex="-1" role="dialog" aria-labelledby="confirmacaoSignOut">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                <!-- header modal confirmação sign out-->
+                <div class="modal-header bg-warning">
+                    <!-- título modal confirmação sign out -->
+                    <h4 class="modal-title display-5 font-weight-bold text-center" id="tituloConfirmSignOut">Confirmação!</h4>
+                    <!-- /título modal confirmação sign out -->
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span>&times;</span>
+                    </button>
+                </div>
+                <!-- /header modal confirmação sign out -->
+                <div class="modal-body">
+                    <div class="container text-center">
+                        <form>
+                            <h5 class="display-5 font-weight-bold mt-2">Você realmente deseja sair?</h5>
+                            <div class="btn-group mt-3" role="group" aria-label="Grupo confirmação log out">
+                                <!-- alternativas -->
+                                <a class="btn btn-success btn-lg mr-2" role="button" href="../index.html">Sim</a>
+                                <button class="btn btn-danger btn-lg">Não</button>
+                                <!-- /alternativas -->
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /modal confirmação sair -->
+
+    <!-- modal cadastro produto -->
+    <div class="modal fade" id="cadastroProdutoModal" tabindex="-1" role="dialog" aria-labelledby="tituloCadastroProdutoModal">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <!-- header modal confirmação sign out-->
+                <div class="modal-header bg-warning">
+                    <!-- título modal cadastro de novo produto -->
+                    <h4 class="modal-title display-5 font-weight-bold text-center" id="tituloCadastroProdutoModal">Cadastro de Produto</h4>
+                    <!-- /título modal cadastro de novo produto -->
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span>&times;</span>
+                    </button>
+                </div>
+                <!-- /header modal confirmação sign out -->
+                <div class="modal-body">
+                    <div class="container">
+                        <form>
+                            <h4 class="mt-3"><strong>Dados básicos do produto</strong></h4>
+                            <p class="lead text-right"><small><em>* Campos obrigatórios</em></small></p>
+                            <hr>
+                            <div class="form-group row">
+                                <label for="codProduto" class="col-3 col-form-label mt-2">Código:</label>
+                                <div class="col-3">
+                                    <input type="text" class="form-control mt-2" id="codProduto">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="nomeProduto" class="col-3 col-form-label">Nome do Produto: *</label>
+                                <div class="col-9">
+                                    <input type="text" class="form-control" id="nomeProduto">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="qtdEntrada" class="col-4 col-form-label">Quantidade de Entrada: *</label>
+                                <div class="col-2">
+                                    <input type="text" class="form-control" id="qtdEntrada">
+                                </div>
+                                <label for="qtdMinimaEstoque" class="col-4 col-form-label">Quantidade Mínima de Estoque: *</label>
+                                <div class="col-2">
+                                    <input type="text" class="form-control" id="qtdMinimaEstoque">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="uniMedida" class="col-4 col-form-label">Unidade de Medida: *</label>
+                                <div class="col-2">
+                                    <input type="text" class="form-control" id="uniMedida">
+                                </div>
+                                <label for="valorUnid" class="col-4 col-form-label">Valor Unitário: *</label>
+                                <div class="col-2">
+                                    <input type="text" class="form-control" id="valorUnid">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="dtEntrada" class="col-4 col-form-label">Data de Entrada:</label>
+                                <div class="col-2">
+                                    <input type="text" class="form-control" id="dtEntrada">
+                                </div>
+                                <label for="dtVencimento" class="col-4 col-form-label">Data de Vencimento: *</label>
+                                <div class="col-2">
+                                    <input type="text" class="form-control" id="dtVencimento">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="comment">Descrição:</label>
+                                <textarea class="form-control" rows="5" id="comment"></textarea>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- footer modal cadastro de produto -->
+                <div class="modal-footer">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-danger btn-lg mr-2">Cadastrar</button>
+                        <button type="button" class="btn btn-secundary btn-lg" data-dismiss="modal">Cancelar</button>
+                    </div>
+                </div>
+                <!-- /footer modal cadastro de produto -->
+            </div>
+        </div>
+    </div>
+    <!-- /modal cadastro produto -->
+
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+</body>
+</html>
